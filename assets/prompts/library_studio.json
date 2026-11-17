@@ -1,0 +1,405 @@
+{
+  "version": 2,
+  "blocks": {
+    "Z_INSTRUCTIONS": {
+      "order": 0,
+      "title": "INSTRUCTIONS",
+      "icon": "🔗",
+      "json_key": "instructions",
+      "items": [
+        {
+          "id": "take_subject",
+          "label": "Take subject",
+          "options": [
+            "Take the subject from image 1 as the main character.",
+            "Take the woman from image 1, preserving her face and identity.",
+            "Use the person in image 1 as the base.",
+            "Take the subject from image 1 and keep their exact facial features."
+          ]
+        },
+        {
+          "id": "dress_clothing",
+          "label": "Dress clothing",
+          "options": [
+            "Dress the subject in the clothing from image 2.",
+            "Put the garments from image 2 onto the subject.",
+            "Transfer the outfit from image 2 onto the person from image 1.",
+            "Dress the subject in the clothing shown in image 2, matching the fit and color."
+          ]
+        },
+        {
+          "id": "add_shoes",
+          "label": "Add shoes",
+          "options": [
+            "Put the shoes from image N on the subject's feet.",
+            "Add the footwear shown in image N.",
+            "Equip the subject with the shoes from image N."
+          ]
+        },
+        {
+          "id": "add_accessory",
+          "label": "Add accessory",
+          "options": [
+            "Add the accessories from image N.",
+            "Put the accessory from image N on the subject.",
+            "Wear the item from image N.",
+            "Add the wearable item from image N matching its position and scale."
+          ]
+        },
+        {
+          "id": "add_eyewear",
+          "label": "Add eyewear",
+          "options": [
+            "Put the eyewear from image N on the subject's face.",
+            "Add the glasses from image N.",
+            "Wear the eyewear shown in image N."
+          ]
+        },
+        {
+          "id": "add_headwear",
+          "label": "Add headwear",
+          "options": [
+            "Add the headwear from image N.",
+            "Put the hat from image N on the subject's head.",
+            "Wear the headpiece shown in image N."
+          ]
+        },
+        {
+          "id": "add_jewelry",
+          "label": "Add jewelry",
+          "options": [
+            "Add the jewelry from image N.",
+            "Put the piercing from image N on the subject.",
+            "Wear the earrings and rings from image N."
+          ]
+        },
+        {
+          "id": "apply_pose",
+          "label": "Apply pose",
+          "options": [
+            "Match the pose from the stickman in image N.",
+            "Pose the subject exactly like the stickman reference in image N.",
+            "Use the pose shown in image N."
+          ]
+        },
+        {
+          "id": "combine_all",
+          "label": "Combine all",
+          "options": [
+            "Combine the subject from image 1 with the clothing from image 2, the shoes from image N, and the pose from the stickman reference."
+          ]
+        }
+      ]
+    },
+
+    "A_SUBJECT": {
+      "order": 1,
+      "title": "SUBJECT",
+      "icon": "👤",
+      "json_key": "subject",
+      "items": [
+        {
+          "id": "subject",
+          "label": "Subject",
+          "options": [
+            "young female subject, 20s.",
+            "young male subject, 20s.",
+            "middle-aged female subject, 40s.",
+            "middle-aged male subject, 40s.",
+            "teenage subject, 15 years old.",
+            "athletic build, muscular.",
+            "slim build, slender.",
+            "curvy build, full figure.",
+            "petite build, small frame."
+          ]
+        },
+        {
+          "id": "face",
+          "label": "Face",
+          "options": [
+            "natural facial asymmetry.",
+            "symmetrical face, balanced features.",
+            "high cheekbones, defined jaw.",
+            "soft round face, gentle features.",
+            "oval face, classic proportions.",
+            "natural expression, neutral.",
+            "subtle smile, warm.",
+            "serious expression, focused."
+          ]
+        },
+        {
+          "id": "skin",
+          "label": "Skin",
+          "options": [
+            "natural skin with visible pores.",
+            "smooth skin, flawless.",
+            "dewy skin, glowing.",
+            "matte skin, no shine.",
+            "freckled skin, natural.",
+            "pale skin, porcelain.",
+            "melanin-rich skin, deep tone."
+          ]
+        }
+      ]
+    },
+
+    "B_MAKEUP": {
+      "order": 2,
+      "title": "MAKEUP",
+      "icon": "💄",
+      "json_key": "makeup",
+      "items": [
+        {
+          "id": "style",
+          "label": "Style",
+          "options": [
+            "natural no-makeup makeup.",
+            "clean girl aesthetic.",
+            "editorial makeup, bold.",
+            "bridal makeup, classic.",
+            "k-beauty style makeup.",
+            "vampy dark makeup.",
+            "ethereal fairy makeup."
+          ]
+        },
+        {
+          "id": "lips",
+          "label": "Lips",
+          "options": [
+            "pale lips, natural.",
+            "deep burgundy lips.",
+            "nude pink lips.",
+            "glossy lip finish.",
+            "matte liquid lipstick."
+          ]
+        },
+        {
+          "id": "eyes",
+          "label": "Eyes",
+          "options": [
+            "smoky eyelid, soft.",
+            "cut crease, sharp.",
+            "cat eye flick, sharp.",
+            "puppy dog eyeliner.",
+            "natural bare lids."
+          ]
+        },
+        {
+          "id": "lip_color",
+          "label": "Lip color",
+          "type": "color",
+          "options": [
+            "apply {color} lipstick.",
+            "glossy {color} lips.",
+            "matte {color} lip finish."
+          ]
+        }
+      ]
+    },
+
+    "C_HAIR": {
+      "order": 3,
+      "title": "HAIR",
+      "icon": "💇",
+      "json_key": "hair",
+      "items": [
+        {
+          "id": "shape",
+          "label": "Shape",
+          "options": [
+            "long straight hair.",
+            "long wavy hair.",
+            "long curly hair.",
+            "short straight hair.",
+            "bob cut, chin length.",
+            "pixie cut, very short.",
+            "ponytail, pulled back.",
+            "bun, updo.",
+            "braided hair, intricate.",
+            "messy hair, bedhead."
+          ]
+        },
+        {
+          "id": "color",
+          "label": "Color",
+          "type": "color",
+          "options": [
+            "{color} hair color.",
+            "hair dyed {color}.",
+            "natural {color} hair."
+          ]
+        }
+      ]
+    },
+
+    "D_CLOTHING": {
+      "order": 4,
+      "title": "CLOTHING",
+      "icon": "👕",
+      "json_key": "clothing",
+      "items": [
+        {
+          "id": "style",
+          "label": "Style",
+          "options": [
+            "formal suit, tailored.",
+            "evening gown, elegant.",
+            "casual streetwear.",
+            "vintage 1950s dress.",
+            "leather jacket, worn.",
+            "trench coat, noir.",
+            "kimono, traditional.",
+            "futuristic bodysuit."
+          ]
+        },
+        {
+          "id": "color",
+          "label": "Main color",
+          "type": "color",
+          "options": [
+            "{color} dress.",
+            "{color} top.",
+            "{color} suit.",
+            "{color} jacket."
+          ]
+        }
+      ]
+    },
+
+    "E_POSE": {
+      "order": 5,
+      "title": "POSE",
+      "icon": "🕺",
+      "json_key": "pose",
+      "items": [
+        {
+          "id": "body",
+          "label": "Body",
+          "options": [
+            "standing still, neutral pose.",
+            "standing, hands at sides.",
+            "standing, arms crossed.",
+            "standing, hands on hips.",
+            "sitting, relaxed posture.",
+            "walking, mid-stride.",
+            "leaning against wall."
+          ]
+        },
+        {
+          "id": "gaze",
+          "label": "Gaze",
+          "options": [
+            "looking directly at camera.",
+            "looking away, in profile.",
+            "eyes closed, serene.",
+            "looking down, contemplative."
+          ]
+        }
+      ]
+    },
+
+    "F_CAMERA": {
+      "order": 6,
+      "title": "CAMERA",
+      "icon": "🎥",
+      "json_key": "camera",
+      "items": [
+        {
+          "id": "shot",
+          "label": "Shot",
+          "options": [
+            "medium close-up.",
+            "full body shot.",
+            "close-up shot.",
+            "wide shot.",
+            "extreme close-up on eyes."
+          ]
+        },
+        {
+          "id": "angle",
+          "label": "Angle",
+          "options": [
+            "eye level shot.",
+            "low angle shot, looking up.",
+            "high angle shot, looking down.",
+            "three-quarter view.",
+            "side view, profile."
+          ]
+        },
+        {
+          "id": "lens",
+          "label": "Lens",
+          "options": [
+            "85mm portrait lens, f/1.4.",
+            "50mm lens, natural perspective.",
+            "35mm lens, wide angle.",
+            "135mm telephoto lens, compressed."
+          ]
+        }
+      ]
+    },
+
+    "G_LIGHT": {
+      "order": 7,
+      "title": "LIGHT",
+      "icon": "💡",
+      "json_key": "lighting",
+      "items": [
+        {
+          "id": "time",
+          "label": "Time",
+          "options": [
+            "golden hour, low warm sun.",
+            "midday, harsh overhead sun.",
+            "blue hour, cold ambient.",
+            "overcast day, diffused grey light.",
+            "night, warm practicals."
+          ]
+        },
+        {
+          "id": "style",
+          "label": "Style",
+          "options": [
+            "soft frontal studio lighting.",
+            "Rembrandt lighting, triangle on cheek.",
+            "split lighting, 90 degrees.",
+            "rim lighting, edge separation.",
+            "high key lighting, bright even.",
+            "low key lighting, dramatic shadows.",
+            "three-point studio lighting."
+          ]
+        }
+      ]
+    },
+
+    "H_QUALITY": {
+      "order": 8,
+      "title": "QUALITY",
+      "icon": "💎",
+      "json_key": "quality",
+      "items": [
+        {
+          "id": "preserve",
+          "label": "Preserve",
+          "options": [
+            "preserve identity, exact facial features.",
+            "preserve composition, exact framing.",
+            "preserve clothing, exact garments.",
+            "preserve pose, exact body position.",
+            "preserve all details, no changes to content."
+          ]
+        },
+        {
+          "id": "quality",
+          "label": "Quality",
+          "options": [
+            "photorealistic, 8K resolution.",
+            "ultra-detailed, sharp focus.",
+            "professional photography quality.",
+            "cinematic quality, filmic."
+          ]
+        }
+      ]
+    }
+  }
+}

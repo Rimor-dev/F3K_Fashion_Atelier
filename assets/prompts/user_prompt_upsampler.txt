@@ -1,0 +1,3 @@
+Reference images follow in order (the first image, the second image, ...).
+User request: {a}
+Output the caption.

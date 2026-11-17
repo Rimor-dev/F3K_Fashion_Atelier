@@ -1,0 +1,555 @@
+/* ============================================================
+   F3K Fashion Atelier — UI theme
+   ВСЕ цвета и размеры здесь. Правится без кода.
+   ============================================================ */
+
+:root {
+    /* ---------- Фон / панели ---------- */
+    --f3k-bg:               #0a0a0a;
+    --f3k-panel-bg:         #111111;
+    --f3k-section-bg:       #141414;
+    --f3k-section-border:   #1f1f1f;
+
+    /* ---------- Текст ---------- */
+    --f3k-text:             #cccccc;
+    --f3k-text-dim:         #888888;
+    --f3k-text-accent:      #4a90d9;
+
+    /* ---------- Акцент ---------- */
+    --f3k-accent:           #4a90d9;
+    --f3k-accent-hover:     #6aa9e8;
+    --f3k-accent-border:    #1b3d75;
+
+    /* ---------- Кнопки ---------- */
+    --f3k-btn-height:       24px;
+    --f3k-btn-radius:       4px;
+    --f3k-btn-font:         11px;
+    --f3k-btn-bg:           #141414;
+    --f3k-btn-border:       #4a90d9;
+
+    /* ---------- Инпуты ---------- */
+    --f3k-input-height:     22px;
+    --f3k-input-font:       12px;
+    --f3k-input-bg:         #0d0d0d;
+    --f3k-input-border:     #333333;
+    --f3k-input-color:      #4a90d9;
+
+    /* ---------- Цифровые табло (серовато-зелёные) ---------- */
+    --f3k-display-bg:       #2b3330;
+    --f3k-display-color:    #7fb89a;
+    --f3k-display-border:   #4a5a52;
+    --f3k-display-font:     18px;
+
+    /* ---------- Слайдеры ---------- */
+    --f3k-slider-track-h:   6px;
+    --f3k-slider-track-bg:  #000000;
+    --f3k-slider-fill:      #4a90d9;
+    --f3k-slider-thumb:     14px;
+    --f3k-slider-thumb-bg:  #4a90d9;
+    --f3k-slider-thumb-border: #000000;
+
+    /* ---------- Свитчи ---------- */
+    --f3k-switch-w:         38px;
+    --f3k-switch-h:         20px;
+    --f3k-switch-knob:      16px;
+    --f3k-switch-off:       #333333;
+    --f3k-switch-on:        #4a90d9;
+
+    /* ---------- Скругления / отступы ---------- */
+    --f3k-radius:           6px;
+    --f3k-gap:              6px;
+    --f3k-pad:              8px;
+}
+
+/* ============================================================
+   Базовые элементы
+   ============================================================ */
+
+.f3k-root {
+    display: flex;
+    flex-direction: column;
+    gap: var(--f3k-gap);
+    padding: var(--f3k-pad);
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: var(--f3k-bg);
+    border-radius: var(--f3k-radius);
+    font-family: monospace;
+    color: var(--f3k-text);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.f3k-section {
+    background: var(--f3k-section-bg);
+    border: 1px solid var(--f3k-section-border);
+    border-radius: var(--f3k-radius);
+    padding: var(--f3k-pad);
+    display: flex;
+    flex-direction: column;
+    gap: var(--f3k-gap);
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.f3k-section-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--f3k-accent);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--f3k-section-border);
+    padding-bottom: 4px;
+}
+
+.f3k-section-title .f3k-badge {
+    margin-left: auto;
+    color: var(--f3k-text-dim);
+    font-size: 9px;
+    font-weight: normal;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+/* ============================================================
+   Кнопки
+   ============================================================ */
+
+.f3k-btn {
+    background: var(--f3k-btn-bg);
+    color: var(--f3k-accent);
+    border: 1px solid var(--f3k-btn-border);
+    border-radius: var(--f3k-btn-radius);
+    height: var(--f3k-btn-height);
+    padding: 0 10px;
+    font-family: monospace;
+    font-size: var(--f3k-btn-font);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+}
+
+.f3k-btn:hover {
+    background: var(--f3k-accent);
+    color: #000;
+}
+
+.f3k-btn:active {
+    transform: translateY(1px);
+}
+
+.f3k-btn.active {
+    background: var(--f3k-accent);
+    color: #000;
+}
+
+.f3k-btn.danger {
+    color: #f87171;
+    border-color: #f87171;
+}
+
+.f3k-btn.danger:hover {
+    background: #f87171;
+    color: #000;
+}
+
+.f3k-btn.wide {
+    width: 100%;
+}
+
+.f3k-btn-row {
+    display: flex;
+    gap: 4px;
+    width: 100%;
+}
+
+.f3k-btn-row .f3k-btn {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+/* ============================================================
+   Инпуты
+   ============================================================ */
+
+.f3k-input,
+.f3k-select,
+.f3k-textarea {
+    background: var(--f3k-input-bg);
+    color: var(--f3k-input-color);
+    border: 1px solid var(--f3k-input-border);
+    border-radius: var(--f3k-btn-radius);
+    height: var(--f3k-input-height);
+    padding: 0 6px;
+    font-family: monospace;
+    font-size: var(--f3k-input-font);
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
+    width: 100%;
+}
+
+.f3k-textarea {
+    height: auto;
+    min-height: 60px;
+    padding: 6px;
+    text-align: left;
+    resize: vertical;
+    line-height: 1.4;
+}
+
+.f3k-input:focus,
+.f3k-select:focus,
+.f3k-textarea:focus {
+    border-color: var(--f3k-accent);
+}
+
+.f3k-input::placeholder,
+.f3k-textarea::placeholder {
+    color: var(--f3k-text-dim);
+}
+
+.f3k-select {
+    cursor: pointer;
+    text-align-last: center;
+}
+
+.f3k-select option {
+    background: #0d0d0d;
+    color: #e6e6e6;
+}
+
+/* ============================================================
+   Поле с подписью
+   ============================================================ */
+
+.f3k-field {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    min-height: var(--f3k-input-height);
+}
+
+.f3k-field-label {
+    color: var(--f3k-text-dim);
+    font-size: 11px;
+    min-width: 64px;
+    flex-shrink: 0;
+    letter-spacing: 0.5px;
+}
+
+.f3k-field-control {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ============================================================
+   Цифровые табло (серовато-зелёные)
+   ============================================================ */
+
+.f3k-display {
+    background: var(--f3k-display-bg);
+    color: var(--f3k-display-color);
+    border: 1px solid var(--f3k-display-border);
+    border-radius: var(--f3k-btn-radius);
+    font-family: 'Courier New', monospace;
+    font-size: var(--f3k-display-font);
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 2px 8px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px;
+    cursor: text;
+    user-select: text;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+}
+
+.f3k-display-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+}
+
+.f3k-display-arrow {
+    width: 28px;
+    height: 30px;
+    background: var(--f3k-btn-bg);
+    color: var(--f3k-accent);
+    border: 1px solid var(--f3k-btn-border);
+    border-radius: var(--f3k-btn-radius);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.f3k-display-arrow:hover {
+    background: var(--f3k-accent);
+    color: #000;
+}
+
+/* ============================================================
+   Слайдеры (чёрный канвас + обводка головки)
+   ============================================================ */
+
+.f3k-slider-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.f3k-slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: var(--f3k-text-dim);
+}
+
+.f3k-slider-value {
+    color: var(--f3k-accent);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.f3k-slider-track {
+    position: relative;
+    width: 100%;
+    height: var(--f3k-slider-track-h);
+    background: var(--f3k-slider-track-bg);
+    border-radius: calc(var(--f3k-slider-track-h) / 2);
+    cursor: pointer;
+}
+
+.f3k-slider-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--f3k-slider-fill);
+    border-radius: calc(var(--f3k-slider-track-h) / 2);
+    pointer-events: none;
+}
+
+.f3k-slider-thumb {
+    position: absolute;
+    top: 50%;
+    width: var(--f3k-slider-thumb);
+    height: var(--f3k-slider-thumb);
+    background: var(--f3k-slider-thumb-bg);
+    border: 2px solid var(--f3k-slider-thumb-border);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+.f3k-slider-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    color: var(--f3k-text-dim);
+}
+
+/* ============================================================
+   Свитчи
+   ============================================================ */
+
+.f3k-switch-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.f3k-switch-label {
+    color: var(--f3k-text-dim);
+    font-size: 11px;
+    flex: 1;
+}
+
+.f3k-switch {
+    width: var(--f3k-switch-w);
+    height: var(--f3k-switch-h);
+    background: var(--f3k-switch-off);
+    border-radius: calc(var(--f3k-switch-h) / 2);
+    position: relative;
+    flex-shrink: 0;
+    transition: background 0.2s;
+}
+
+.f3k-switch.on {
+    background: var(--f3k-switch-on);
+}
+
+.f3k-switch-knob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: var(--f3k-switch-knob);
+    height: var(--f3k-switch-knob);
+    border-radius: 50%;
+    background: #fff;
+    transition: left 0.2s, background 0.2s;
+}
+
+.f3k-switch.on .f3k-switch-knob {
+    left: calc(var(--f3k-switch-w) - var(--f3k-switch-knob) - 2px);
+}
+
+/* ============================================================
+   Палитра
+   ============================================================ */
+
+.f3k-palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    width: 100%;
+}
+
+.f3k-swatch {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.f3k-swatch:hover {
+    transform: scale(1.15);
+}
+
+.f3k-swatch.selected {
+    border-color: #fff;
+}
+
+/* ============================================================
+   Карточки слотов
+   ============================================================ */
+
+.f3k-slot-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 6px;
+    background: #0e0e0e;
+    border: 1px solid var(--f3k-section-border);
+    border-radius: var(--f3k-btn-radius);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.f3k-slot-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.f3k-slot-label {
+    flex: 1;
+    color: var(--f3k-text-dim);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.f3k-slot-preview {
+    width: 100%;
+    height: 64px;
+    background: #050505;
+    border: 1px dashed #2a2a2a;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+    font-size: 22px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.f3k-slot-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.f3k-slot-preview:hover {
+    border-color: var(--f3k-accent);
+    color: var(--f3k-accent);
+}
+
+/* ============================================================
+   Общие утилиты
+   ============================================================ */
+
+.f3k-row {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+    align-items: center;
+}
+
+.f3k-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    width: 100%;
+}
+
+.f3k-hint {
+    color: var(--f3k-text-dim);
+    font-size: 10px;
+    line-height: 1.3;
+}
+
+.f3k-hidden {
+    display: none !important;
+}
+
+.f3k-preview-box {
+    width: 100%;
+    min-height: 80px;
+    background: #050505;
+    border: 1px solid var(--f3k-section-border);
+    border-radius: var(--f3k-btn-radius);
+    padding: 6px;
+    font-size: 11px;
+    color: var(--f3k-text);
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow: auto;
+    max-height: 220px;
+    box-sizing: border-box;
+    font-family: monospace;
+    line-height: 1.4;
+}

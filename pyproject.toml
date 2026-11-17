@@ -1,0 +1,17 @@
+[project]
+name = "F3K_Fashion_Atelier"
+description = "ComfyUI Flux3 Klein Fashion Atelier v.1"
+version = "1.0.0"
+license = {text = "MIT"}
+authors = [{name = "Rimor"}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+]
+
+[project.urls]
+Repository = "https://github.com/Rimor-dev/F3K_Fashion_Atelier"
+
+[tool.comfy]
+PublisherId = "rimor"
+DisplayName = "F3K Fashion Atelier"

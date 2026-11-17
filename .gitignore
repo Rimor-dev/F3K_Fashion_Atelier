@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# ComfyUI / node specifics
+node.zip
+
+# Local dev
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# User-uploaded slot images
+assets/slots/*
+!assets/slots/.gitkeep
+
+# Outputs / temp
+output/
+temp/
+*.tmp
