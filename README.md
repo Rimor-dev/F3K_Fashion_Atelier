@@ -8,7 +8,7 @@ and live preview during sampling.
 
 **Recommended to use with [AKA ComfyUI Shell](https://github.com/Rimor-dev/AKA)** — a companion shell/launcher for ComfyUI.
 
-<img src="https://github.com/Rimor-dev/F3K_Fashion_Atelier/blob/main/gitassets/cover.png" alt="main" width="100%">
+<img src="https://github.com/Rimor-dev/F3K_Fashion_Atelier/blob/main/gitassets/cover1.png" alt="main" width="100%">
 
 ## Features
 
