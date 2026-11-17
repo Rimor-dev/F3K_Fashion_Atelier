@@ -6,6 +6,8 @@ Combines reference images (model, clothing, shoes, accessories, pose) into a sin
 conditioning with slot commands, prompt blocks (JSON / Linear), custom sigmas,
 and live preview during sampling.
 
+**Recommended to use with [AKA ComfyUI Shell](https://github.com/Rimor-dev/AKA)** — a companion shell/launcher for ComfyUI.
+
 ## Features
 
 - **10 image slots** — model, main/extra clothing, shoes, headwear, eyewear,
